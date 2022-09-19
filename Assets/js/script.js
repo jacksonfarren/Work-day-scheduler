@@ -1,8 +1,17 @@
 //Set date to display under jumbotron
 var currentDay = moment().format('dddd, MMM Do');
+//var currentTime = moment().format('[Current Time: ]HH:mm')
 
 //Append to currentDay class
 $("#currentDay").append(currentDay);
+//$("#currentDay").after(currentTime);
+
+//Dynamically update time with moment
+function updateTime() {
+    var currentTime = moment(new Date())
+
+    $("#updateTime").html(currentTime.format('[Current Time: ]HH:mm'));
+}
 
 var saveBtn = $(".saveBtn");
 var hour = $(".hour");
@@ -68,5 +77,13 @@ function getStorage() {
     })
 }
 
-getStorage();
-setEra();
+//getStorage();
+//setEra();
+$(document).ready(function() {
+    updateTime();
+    getStorage();
+    setEra();
+    
+    setInterval(updateTime, 1000);
+    setInterval(setEra, 1000);
+})
