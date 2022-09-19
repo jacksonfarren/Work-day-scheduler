@@ -1,3 +1,5 @@
+Deployed Application URL: https://jacksonfarren.github.io/Work-day-scheduler/
+
 ## User Story
 
 ```md
@@ -23,3 +25,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+
+## Deployment Screenshot
+
+<img src="Assets\Deployment.jpg">
