@@ -10,7 +10,7 @@ $("#currentDay").append(currentDay);
 function updateTime() {
     var currentTime = moment(new Date())
 
-    $("#updateTime").html(currentTime.format('[Current Time: ]HH:mm'));
+    $("#updateTime").html(currentTime.format('[Current Time: ]LT'));
 }
 
 var saveBtn = $(".saveBtn");
